@@ -528,7 +528,84 @@ docker-compose stop
 Supported filenames: docker-compose.yml, docker-compose.yaml, compose.yml, compose.yaml
 docker-compose -f raham.yml stop
 
-=================================
+History:
+=======
+yum install docker -y
+    2  systemctl start docker
+    3  systemctl status docker
+    4  clear
+    5  docker pull ubuntu
+    6  docker images
+    7  vi Dockerfile
+    8  vi index.html
+    9  cat Dockerfile
+   10  docker build -t movies:v1 .
+   11  docker images
+   12  docker run -it --name movies -p 81:80 movies:v1
+   13  docker ps -a
+   14  docker start 60d1456fa321
+   15  docker ps -a
+   16  clear
+   17  vi index.html
+   18  docker build -t train:v1 .
+   19  docker run -itd --name train -p 82:80 train:v1
+   20  vi index.html
+   21  docker build -t dth:v1 .
+   22  docker run -itd --name dth -p 83:80 dth:v1
+   23  vi index.html
+   24  docker build -t recharge:v1 .
+   25  docker run -itd --name recharge -p 84:80 recharge:v1
+   26  docker ps -a
+   27  sudo curl -L "https://github.com/docker/compose/releases/download/1.29.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+   28  ls /usr/local/bin/
+   29  sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+   30  sudo chmod +x /usr/local/bin/docker-compose
+   31  docker-compose version
+   32  clear
+   33  vi docker-compose.yml
+   34  docker-compose up
+   35  vi docker-compose.yml
+   36*
+   37  docker kill $(docker ps -a -q)
+   38  docker rm $(docker ps -a -q)
+   39  docker ps
+   40  docker ps -a
+   41  docker-compose up
+   42  vi docker-compose.yml
+   43  docker-compose up
+   44  docker-compose down -d
+   45  docker ps -a
+   46  docker-compose rm
+   47  docker-compose up -d
+   48  docker-compose ps
+   49  docker-compose down
+   50  docker-compose ps
+   51  docker-compose ps -a
+   52  docker-compose up -d
+   53  docker-compose ps -a
+   54  docker-compose stop
+   55  docker-compose start
+   56  docker-compose kill
+   57  docker-compose start
+   58  docker-compose pause
+   59  docker-compose ps
+   60  docker-compose unpaused
+   61  docker-compose unpause
+   62*
+   63  docker images
+   64  docker-compose log
+   65  docker-compose logs
+   66  docker-compose scale dth=10
+   67  docker-compose ps
+   68  docker-compose scale dth=5
+   69  docker-compose ps
+   70  docker-compose top
+   71  docker-compose ps
+   72  docker-compose top root_recharge_1
+   73  history
+
+
+================================================================================================
 
 DOCKER HUB:
 Its a central platfrom used to store docker images.
