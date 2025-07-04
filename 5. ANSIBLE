@@ -732,6 +732,27 @@ LOOKUPS: this module used to get data from files, db and key-values
 cat creds.txt
 user=raham
 
+
+
+
+---
+- hosts: dev[0]
+  tasks:
+    - name: fetch the data
+      slurp:
+        src: /root/cred.txt
+      register: a
+
+    - name: displaying the data
+      debug:
+        msg: the credentials are {{a.content | b64decode}}
+
+...
+
+
+
+
+
 STRATAGIES:
 
 LINEAR: execute tasks sequencially
