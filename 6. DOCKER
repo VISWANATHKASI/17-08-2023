@@ -603,7 +603,27 @@ yum install docker -y
    71  docker-compose ps
    72  docker-compose top root_recharge_1
    73  history
+===========================================================================================
 
+APPLICATION DEPLOYMENT:
+
+stage('tag a build'){
+            steps{
+            sh '''
+            docker commit -t tomcat $img
+            docker tag $img $repo
+            docker login -u viswanathkasi -p $password
+            docker push $repo
+            '''     
+            }
+        }
+        stage('creating a container'){
+            steps{
+                sh '''
+                  docker stack deploy -c docker-compose.yml paytm
+                '''
+            }
+        }
 
 ================================================================================================
 
